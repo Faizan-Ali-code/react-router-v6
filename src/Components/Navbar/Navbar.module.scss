@@ -1,0 +1,35 @@
+@mixin display-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(224, 224, 224);
+  @include display-flex();
+  height: 90px;
+
+  .logo {
+    font-size: 2rem;
+    margin: 15px;
+    border: 1px solid rgb(223, 173, 173);
+  }
+  ul {
+    @include display-flex();
+
+    li {
+      list-style-type: none;
+      margin: 10px;
+    }
+    .link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(153, 152, 152);
+      font-weight: bolder;
+      &:hover {
+        color: rgb(92, 92, 92);
+      }
+    }
+  }
+}
